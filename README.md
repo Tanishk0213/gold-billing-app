@@ -16,7 +16,7 @@ A Flask-based web application for gold shops to manage daily rates, customer reg
 ### 🛠️ Tech Stack
 * **Backend:** Python (Flask)
 * **Frontend:** HTML5, CSS3, JavaScript
-* **Database:** (Mention your database like SQLite/MySQL)
+* **Database:** (Mention your database like MySQL)
 
 ### 🚀 How to Run
 1. Install Flask: `pip install flask`
