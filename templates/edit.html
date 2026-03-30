@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Gold Rate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Edit Gold Rate</h2>
+
+    <form action="/update" method="POST">
+
+        <input type="hidden" name="id" value="{{ row[0] }}">
+
+        <label>Date</label>
+        <input type="date" name="date" value="{{ row[1] }}" required>
+
+        <label>Gold Type</label>
+        <input type="text" name="gold_type" value="{{ row[2] }}" required>
+
+        <label>Rate</label>
+        <input type="number" name="rate" value="{{ row[3] }}" required>
+
+        <label>GST</label>
+        <input type="number" name="gst" value="{{ row[4] }}" required>
+
+        <label>Making</label>
+        <input type="number" name="making" value="{{ row[5] }}" required>
+
+        <button type="submit" class="btn-update">Update</button>
+    </form>
+
+    <br>
+    <a href="/view" class="link-btn">Back</a>
+</div>
+
+</body>
+</html>

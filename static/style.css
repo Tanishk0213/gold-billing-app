@@ -1,0 +1,365 @@
+/* ========================================================= */
+/* 1. SOFT PREMIUM GRADIENT (All Pages)                     */
+/* ========================================================= */
+body, .auth-body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Soft Blue, Lavender & Silver Light Gradient - Ellam Page-kum Ithu Varum */
+    background: linear-gradient(-45deg, #e3f2fd, #f3e5f5, #e8eaf6, #eeeeee);
+    background-size: 400% 400%;
+    animation: liteGradient 15s ease infinite;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@keyframes liteGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 750px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Soft shadow for lite theme */
+}
+
+h2, h3 {
+    text-align: center;
+    color: #b8860b;
+    margin-bottom: 20px;
+}
+
+/* ========================================================= */
+/* 2. CLICK-TO-OPEN USER MENU                                */
+/* ========================================================= */
+.user-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.dropbtn {
+    background: white;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.dropbtn:hover {
+    border-color: #b8860b;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    z-index: 1000;
+    margin-top: 8px;
+    overflow: hidden;
+    animation: fadeInDown 0.3s ease;
+}
+
+.dropdown:focus .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #fff5f5;
+    color: #d9534f;
+}
+
+/* ========================================================= */
+/* 3. INPUTS & BUTTONS (Gold Pages)                          */
+/* ========================================================= */
+.container label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.container input,
+.container select {
+    width: 93%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    /* Cursor theliva theriya fix */
+    caret-color: black;
+    color: black;
+}
+
+.container input:focus,
+.container select:focus {
+    border-color: gold;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+button, .link-btn {
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .link-btn:hover {
+    transform: scale(1.02);
+}
+
+.btn-save {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #b8860b, #d4af37);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn-update {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.link-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #b8860b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* ========================================================= */
+/* 4. FORM BOX (Login & Register)                            */
+/* ========================================================= */
+.form-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    border-top: 5px solid #d4af37;
+    margin-top: 10vh; /* Centering fix for lite theme */
+}
+
+.auth-body input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    caret-color: black; /* I-beam fix */
+}
+
+.auth-body button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #b8860b, #d4af37);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.auth-body a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #2a5298;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.auth-body a:hover {
+    color: #b8860b;
+    text-decoration: underline;
+}
+
+/* ========================================================= */
+/* 5. ERROR & SUCCESS ANIMATIONS                             */
+/* ========================================================= */
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.error-box, .flash.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #721c24;
+    animation: shakeError 0.4s ease-in-out;
+}
+
+.success-box, .flash.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #155724;
+    animation: fadeInDown 0.5s ease-out;
+}
+
+/* ========================================================= */
+/* 6. TABLE STYLES                                           */
+/* ========================================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(to right, gold, #d4af37);
+    color: black;
+}
+
+tr:hover {
+    background-color: #fffde7;
+    transition: 0.3s;
+}
+
+.btn-delete {
+    background: #ff4d4d;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+}
+/* ========================================================= */
+/* 1. MULTI-COLOR SOFT PREMIUM GRADIENT (All Pages)         */
+/* ========================================================= */
+body, .auth-body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Neraiya Lite Colors (Blue, Purple, Pink, Green, Yellow, Silver) */
+    background: linear-gradient(-45deg, #e3f2fd, #f3e5f5, #fce4ec, #e8f5e9, #fff9c4, #e0f7fa, #f5f5f5);
+    background-size: 400% 400%;
+    /* 20 seconds speed-la smooth-ah move aagum */
+    animation: liteGradient 20s ease infinite;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@keyframes liteGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================================================= */
+/* 2. CONTAINER & BUTTONS (Unchanged - Keeping Your Gold Theme) */
+/* ========================================================= */
+.container {
+    width: 750px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #b8860b; /* Gold Heading Stayed */
+    margin-bottom: 20px;
+}
+
+.btn-save {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #b8860b, #d4af37); /* Gold Button Stayed */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.auth-body button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #b8860b, #d4af37); /* Gold Button Stayed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* TABLE HEADER (Gold Theme Stayed) */
+th {
+    background: linear-gradient(to right, gold, #d4af37);
+    color: black;
+}
+
+/* ... Matha ellam pazhaya code-ye use pannikalam ... */

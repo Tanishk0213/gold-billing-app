@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Rates - View</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="user-menu">
+    <div class="dropdown" tabindex="0">
+        <button class="dropbtn">👤 {{ session['user'] | upper }} ▾</button>
+        <div class="dropdown-content">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>All Item Rates</h2>
+
+    <table>
+    <tr>
+        <th>S.no</th>
+        <th>Date</th>
+        <th>Category</th> <th>Type/Purity</th>
+        <th>Rate Per Gram</th>
+        <th>GST</th>
+        <th>Making</th>
+        <th>Action</th>
+    </tr>
+
+    {% for row in rates %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row[1] }}</td>
+        <td style="font-weight:bold; color:#b8860b;">{{ row[2] }}</td> 
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}%</td>
+        <td>{{ row[6] }}</td>
+        <td>
+            <form action="/delete" method="POST">
+                <input type="hidden" name="id" value="{{ row[0] }}">
+                <button type="submit" class="btn-delete">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <br>
+    <a href="/add" class="link-btn">Back / Add New</a>
+</div>
+
+</body>
+</html>
